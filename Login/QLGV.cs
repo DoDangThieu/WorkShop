@@ -16,5 +16,10 @@ namespace Quan_ly_Sinh_Vien
         {
             InitializeComponent();
         }
+
+        private void rdbnam_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

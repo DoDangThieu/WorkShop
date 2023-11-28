@@ -1,4 +1,5 @@
 ﻿using Quan_ly_Sinh_Vien;
+using Quan_ly_Sinh_Vien.Models;
 using System.Drawing.Drawing2D;
 using System.Text;
 
@@ -6,9 +7,11 @@ namespace Login
 {
     public partial class DangNhap : Form
     {
+        private string accountType;
         private const int CORNER_RADIUS = 15;
         private bool isDragging = false;
         private int offsetX, offsetY;
+        quanlydiemContext qld = new quanlydiemContext();
         public DangNhap()
         {
             InitializeComponent();
@@ -72,43 +75,92 @@ namespace Login
 
         private void Login_Click(object sender, EventArgs e)
         {
-            if (tbusername.Text == "")
+            string username = txtusername.Text;
+            string password = txtpassword.Text;
+            var cbUserName = (from cb in qld.Canbos
+                             where cb.Tendn.ToUpper() == username.ToLower()
+                             select new
+                             {
+                                 cb.Tendn,
+                                 cb.Matkhau
+                             }).FirstOrDefault();
+            var gvUserName = (from gv in qld.Giaoviens
+                              where gv.Tennd.ToUpper() == username.ToLower()
+                              select new
+                              {
+                                  gv.Tennd,
+                                  gv.Matkhau
+                              }).FirstOrDefault();
+            var svUserName = (from sv in qld.Sinhviens
+                              where sv.Tennd.ToUpper() == username.ToLower()
+                              select new
+                              {
+                                  sv.Tennd,
+                                  sv.Matkhau
+                              }).FirstOrDefault();
+            if (cbUserName !=null && password.ToUpper() == cbUserName.Matkhau.ToUpper())
             {
-                MessageBox.Show("Chua Nhap Tai Khoan !!");
-                tbusername.Focus();
-                return;
+                bool isCanBoLoginSuccessful = true;
+                MessageBox.Show("Đăng nhập thành công!");
+                accountType = "canbo";
+                if (isCanBoLoginSuccessful)
+                {
+                    TrangChu TC = new TrangChu(accountType);
+                    TC.Show();
+                }
             }
-            if (tbpassword.Text == "")
+            else if(gvUserName !=null && password.ToUpper() == gvUserName.Matkhau.ToUpper())
             {
-                MessageBox.Show("Chua Nhap Mat Khau !!");
-                tbpassword.Focus();
-                return;
+                bool isGiaoVienLoginSuccessful = true;
+                accountType = "giaovien";
+                MessageBox.Show("Đăng nhập thành công!");
+                if (isGiaoVienLoginSuccessful)
+                {
+                    TrangChu TC = new TrangChu(accountType);
+                    TC.Show();
+                }
             }
             else
             {
-
-                //QLSV form2 = new QLSV();
-
-                //// Chuyển sang Form2
-                //form2.Show();
-                //QLDSV form4 = new QLDSV();
-                //form4.Show();
-                TrangChu form5 = new TrangChu();
-                form5.Show();
-
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng");
             }
+            //if (tbusername.Text == "")
+            //{
+            //    MessageBox.Show("Chua Nhap Tai Khoan !!");
+            //    tbusername.Focus();
+            //    return;
+            //}
+            //if (tbpassword.Text == "")
+            //{
+            //    MessageBox.Show("Chua Nhap Mat Khau !!");
+            //    tbpassword.Focus();
+            //    return;
+            //}
+            //else
+            //{
+
+            //    //QLSV form2 = new QLSV();
+
+            //    //// Chuyển sang Form2
+            //    //form2.Show();
+            //    //QLDSV form4 = new QLDSV();
+            //    //form4.Show();
+            //    TrangChu form5 = new TrangChu();
+            //    form5.Show();
+
+            //}
 
 
         }
 
         private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
         {
-            tbpassword.UseSystemPasswordChar = false;
+            txtpassword.UseSystemPasswordChar = false;
         }
 
         private void pictureBox4_MouseUp(object sender, MouseEventArgs e)
         {
-            tbpassword.UseSystemPasswordChar = true;
+            txtpassword.UseSystemPasswordChar = true;
         }
     }
 }
