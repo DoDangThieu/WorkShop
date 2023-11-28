@@ -25,12 +25,13 @@ namespace Login
 
         private void Close_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
-            Close();
+            Application.Exit();
+
         }
 
         private void DangNhap_Load(object sender, EventArgs e)
         {
+            //bO vIỀN
             GraphicsPath path = new GraphicsPath();
             path.AddArc(new Rectangle(0, 0, CORNER_RADIUS * 2, CORNER_RADIUS * 2), 180, 90);
             path.AddArc(new Rectangle(Width - CORNER_RADIUS * 2, 0, CORNER_RADIUS * 2, CORNER_RADIUS * 2), 270, 90);
@@ -122,7 +123,7 @@ namespace Login
             }
             else
             {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng");
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, 0, false);
             }
             //if (tbusername.Text == "")
             //{

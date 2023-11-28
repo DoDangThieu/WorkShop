@@ -55,9 +55,8 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(293, 1067);
+            panel1.Size = new Size(256, 800);
             panel1.TabIndex = 0;
             // 
             // btn_qldsv
@@ -70,10 +69,9 @@
             btn_qldsv.ForeColor = Color.White;
             btn_qldsv.Image = (Image)resources.GetObject("btn_qldsv.Image");
             btn_qldsv.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_qldsv.Location = new Point(3, 475);
-            btn_qldsv.Margin = new Padding(3, 4, 3, 4);
+            btn_qldsv.Location = new Point(0, 489);
             btn_qldsv.Name = "btn_qldsv";
-            btn_qldsv.Size = new Size(289, 65);
+            btn_qldsv.Size = new Size(253, 123);
             btn_qldsv.TabIndex = 3;
             btn_qldsv.Text = "   Quản Lý Điểm SV";
             btn_qldsv.UseVisualStyleBackColor = false;
@@ -89,10 +87,9 @@
             bt_GV.ForeColor = Color.White;
             bt_GV.Image = (Image)resources.GetObject("bt_GV.Image");
             bt_GV.ImageAlign = ContentAlignment.MiddleLeft;
-            bt_GV.Location = new Point(0, 371);
-            bt_GV.Margin = new Padding(3, 4, 3, 4);
+            bt_GV.Location = new Point(0, 358);
             bt_GV.Name = "bt_GV";
-            bt_GV.Size = new Size(289, 65);
+            bt_GV.Size = new Size(253, 125);
             bt_GV.TabIndex = 3;
             bt_GV.Text = "   Quản Lý Giáo Viên";
             bt_GV.UseVisualStyleBackColor = false;
@@ -108,10 +105,9 @@
             bt_Sinhvien.ForeColor = Color.White;
             bt_Sinhvien.Image = (Image)resources.GetObject("bt_Sinhvien.Image");
             bt_Sinhvien.ImageAlign = ContentAlignment.MiddleLeft;
-            bt_Sinhvien.Location = new Point(3, 271);
-            bt_Sinhvien.Margin = new Padding(3, 4, 3, 4);
+            bt_Sinhvien.Location = new Point(0, 230);
             bt_Sinhvien.Name = "bt_Sinhvien";
-            bt_Sinhvien.Size = new Size(289, 65);
+            bt_Sinhvien.Size = new Size(253, 101);
             bt_Sinhvien.TabIndex = 3;
             bt_Sinhvien.Text = "   Quản Lý Sinh Viên";
             bt_Sinhvien.UseVisualStyleBackColor = false;
@@ -120,10 +116,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(74, 68);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(0, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(135, 131);
+            pictureBox1.Size = new Size(253, 221);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -132,10 +127,9 @@
             // 
             panel2.BackColor = Color.LightSkyBlue;
             panel2.Controls.Add(button5);
-            panel2.Location = new Point(0, 977);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(0, 733);
             panel2.Name = "panel2";
-            panel2.Size = new Size(293, 89);
+            panel2.Size = new Size(256, 67);
             panel2.TabIndex = 1;
             // 
             // button5
@@ -149,21 +143,20 @@
             button5.Image = (Image)resources.GetObject("button5.Image");
             button5.ImageAlign = ContentAlignment.MiddleLeft;
             button5.Location = new Point(0, 0);
-            button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
-            button5.Size = new Size(293, 89);
+            button5.Size = new Size(256, 67);
             button5.TabIndex = 3;
             button5.Text = "     LogOut";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // panel3
             // 
             panel3.BackColor = Color.LightSkyBlue;
             panel3.Controls.Add(Close_menu);
             panel3.Location = new Point(0, 0);
-            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1601, 33);
+            panel3.Size = new Size(1401, 25);
             panel3.TabIndex = 3;
             panel3.Paint += panel3_Paint;
             // 
@@ -174,10 +167,9 @@
             Close_menu.FlatStyle = FlatStyle.Flat;
             Close_menu.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             Close_menu.ForeColor = Color.White;
-            Close_menu.Location = new Point(1527, -3);
-            Close_menu.Margin = new Padding(3, 4, 3, 4);
+            Close_menu.Location = new Point(1336, -2);
             Close_menu.Name = "Close_menu";
-            Close_menu.Size = new Size(73, 36);
+            Close_menu.Size = new Size(64, 27);
             Close_menu.TabIndex = 1;
             Close_menu.Text = "X";
             Close_menu.UseVisualStyleBackColor = true;
@@ -185,24 +177,22 @@
             // 
             // pn_main
             // 
-            pn_main.Location = new Point(284, 41);
-            pn_main.Margin = new Padding(3, 4, 3, 4);
+            pn_main.Location = new Point(259, 31);
             pn_main.Name = "pn_main";
-            pn_main.Size = new Size(1316, 1022);
+            pn_main.Size = new Size(1141, 766);
             pn_main.TabIndex = 4;
             pn_main.Paint += pn_main_Paint;
             // 
             // TrangChu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1600, 1067);
+            ClientSize = new Size(1400, 800);
             Controls.Add(panel3);
             Controls.Add(pn_main);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "TrangChu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TrangChu";

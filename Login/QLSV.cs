@@ -38,7 +38,7 @@ namespace Login
                 string str_MSSV = txt_MSSV.Text;
                 string str_SDT = txt_SDT.Text;
                 string str_Email = txt_Email.Text;
-                string str_NgaySinh = txt_NgaySinh.Text;
+                string str_NgaySinh = dtpngaysinh.Text;
                 //Khoi tAO
                 Sinhvien SinhVien = new Sinhvien()
                 {
