@@ -100,11 +100,19 @@ namespace Quan_ly_Sinh_Vien
             if (_accountType.Equals("canbo"))
             {
                 btn_qldsv.Enabled = false;
-            }else if (_accountType.Equals("giaovien"))
+            }
+            else if (_accountType.Equals("giaovien"))
             {
                 bt_GV.Enabled = false;
                 bt_Sinhvien.Enabled = false;
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            DangNhap dangnhap = new DangNhap();
+            dangnhap.Show();
         }
     }
 }

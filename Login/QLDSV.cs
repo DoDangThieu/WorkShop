@@ -29,16 +29,16 @@ namespace Quan_ly_Sinh_Vien
 
         private void QLDSV_Load(object sender, EventArgs e)
         {
-            listView1.Columns[0].Width = (int)(listView1.Width * 0.25);
-            listView1.Columns[1].Width = (int)(listView1.Width * 0.25);
-            listView1.Columns[2].Width = (int)(listView1.Width * 0.25);
-            listView1.Columns[3].Width = (int)(listView1.Width * 0.25);
-            listView1.Columns[4].Width = (int)(listView1.Width * 0.25);
-            listView1.Columns[5].Width = (int)(listView1.Width * 0.25);
-            listView1.Columns[6].Width = (int)(listView1.Width * 0.25);
-            listView1.View = View.Details;
-            listView1.GridLines = true;
-            listView1.FullRowSelect = true;
+            //listView1.Columns[0].Width = (int)(listView1.Width * 0.25);
+            //listView1.Columns[1].Width = (int)(listView1.Width * 0.25);
+            //listView1.Columns[2].Width = (int)(listView1.Width * 0.25);
+            //listView1.Columns[3].Width = (int)(listView1.Width * 0.25);
+            //listView1.Columns[4].Width = (int)(listView1.Width * 0.25);
+            //listView1.Columns[5].Width = (int)(listView1.Width * 0.25);
+            //listView1.Columns[6].Width = (int)(listView1.Width * 0.25);
+            //listView1.View = View.Details;
+            //listView1.GridLines = true;
+            //listView1.FullRowSelect = true;
         }
     }
 }

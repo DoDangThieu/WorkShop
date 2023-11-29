@@ -51,19 +51,12 @@
             lb_sreach = new Label();
             bt_sreach = new Button();
             txbox_Sreach = new TextBox();
-            listView1 = new ListView();
-            co_MaSV = new ColumnHeader();
-            co_Hoten = new ColumnHeader();
-            co_TiengAnh = new ColumnHeader();
-            co_VanHoc = new ColumnHeader();
-            co_Toanhoc = new ColumnHeader();
-            co_Theduc = new ColumnHeader();
-            co_TB = new ColumnHeader();
             panel1 = new Panel();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
             button2 = new Button();
+            dataGridView1 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -72,6 +65,7 @@
             gbox_sreach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // splitContainer1
@@ -88,7 +82,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(listView1);
+            splitContainer1.Panel2.Controls.Add(dataGridView1);
             splitContainer1.Panel2.Controls.Add(panel1);
             splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
             splitContainer1.Size = new Size(1141, 760);
@@ -310,45 +304,6 @@
             txbox_Sreach.Size = new Size(266, 30);
             txbox_Sreach.TabIndex = 0;
             // 
-            // listView1
-            // 
-            listView1.Columns.AddRange(new ColumnHeader[] { co_MaSV, co_Hoten, co_TiengAnh, co_VanHoc, co_Toanhoc, co_Theduc, co_TB });
-            listView1.Location = new Point(9, 84);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(737, 410);
-            listView1.TabIndex = 15;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
-            // 
-            // co_MaSV
-            // 
-            co_MaSV.Text = "Mã SV";
-            // 
-            // co_Hoten
-            // 
-            co_Hoten.Text = "Họ và Tên";
-            // 
-            // co_TiengAnh
-            // 
-            co_TiengAnh.Text = "Tiếng Anh";
-            // 
-            // co_VanHoc
-            // 
-            co_VanHoc.Text = "Văn Học";
-            // 
-            // co_Toanhoc
-            // 
-            co_Toanhoc.Text = "Toán Học";
-            // 
-            // co_Theduc
-            // 
-            co_Theduc.Text = "Thể Dục";
-            // 
-            // co_TB
-            // 
-            co_TB.Text = "Điểm TB";
-            // 
             // panel1
             // 
             panel1.BackColor = Color.White;
@@ -429,6 +384,16 @@
             button2.Text = "ADD SV";
             button2.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(3, 84);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(752, 664);
+            dataGridView1.TabIndex = 15;
+            // 
             // QLDSV
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -449,6 +414,7 @@
             gbox_sreach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -481,13 +447,6 @@
         private Button button5;
         private Button button4;
         private Button button2;
-        private ListView listView1;
-        private ColumnHeader co_MaSV;
-        private ColumnHeader co_Hoten;
-        private ColumnHeader co_TiengAnh;
-        private ColumnHeader co_VanHoc;
-        private ColumnHeader co_Toanhoc;
-        private ColumnHeader co_Theduc;
-        private ColumnHeader co_TB;
+        private DataGridView dataGridView1;
     }
 }
