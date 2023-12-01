@@ -115,8 +115,9 @@
             // 
             // dtpngaysinh
             // 
+            dtpngaysinh.CustomFormat = "dd/MM/yy";
             dtpngaysinh.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpngaysinh.Format = DateTimePickerFormat.Short;
+            dtpngaysinh.Format = DateTimePickerFormat.Custom;
             dtpngaysinh.Location = new Point(108, 291);
             dtpngaysinh.Name = "dtpngaysinh";
             dtpngaysinh.Size = new Size(207, 27);
