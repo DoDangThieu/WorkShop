@@ -111,8 +111,10 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Cursor = Cursors.AppStarting;
+            dateTimePicker1.CustomFormat = "dd/MM/yy";
             dateTimePicker1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.Location = new Point(98, 291);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(242, 27);
